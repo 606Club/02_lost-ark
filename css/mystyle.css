@@ -1,0 +1,258 @@
+
+
+:root{
+    		--purple : #631FC2;
+            --black : #0E0E0E;
+            --purple : #190529;
+            --black2 : #2B2929;
+            --loading : #1f1f1f;
+    	}
+        .bo{
+            border: 1px solid red;
+        }
+
+        body{
+            font-family: 'Noto Serif KR', serif;
+            position: relative;
+            height: 100vh;
+        }
+
+    	#main_carousel{
+    		overflow: hidden;
+    	}
+
+        /*--------------------------------------------------------------
+        # Back to top button
+        --------------------------------------------------------------*/
+        .back-to-top {
+          position: fixed;
+          display: none;
+          right: 15px;
+          bottom: 15px;
+          z-index: 99999;
+        }
+
+        /*--------------------------------------------------------------
+        # Disable AOS delay on mobile
+        --------------------------------------------------------------*/
+        @media screen and (max-width: 768px) {
+          [data-aos-delay] {
+            transition-delay: 0 !important;
+          }
+        }
+        .down{
+            background: url(../lostark/down.png) no-repeat;
+            width: 103px;
+            height: 13px;
+            left: 50%;
+            margin-left: -51.5px;
+            top: -15px;
+            position: absolute;
+        }
+        .scroll_down{
+            background: url(../lostark/scroll_down.png);
+            width: 42px;
+            height: 87px;
+            position: absolute;
+            left: 50%;
+            z-index: 9999;
+            margin-left: -21px;
+            bottom: 50px;
+        }
+
+        
+    	/*캐로셀 안의 이미지 사이즈를 동일하게 맞추거나 화면높이에 이미지 높이 맞추기*/
+    	#main_carousel .carousel-item:nth-of-type(1){
+    		height: 100vh;
+    		background: url(../lostark/carousel01.jpg) no-repeat center / cover;
+    	}
+    	#main_carousel .carousel-item:nth-of-type(2){
+    		height: 100vh;
+    		background: url(../lostark/carousel02.jpg) no-repeat center  / cover;
+    	}
+    	#main_carousel .carousel-item:nth-of-type(3){
+    		height: 100vh;
+    		background: url(../lostark/carousel03.jpg) no-repeat center / cover;
+    	}
+
+        @media screen and (max-width:992px) {
+            .car02_top{
+                padding-bottom: 150px;
+            }
+            .car03_botm{
+                padding-top: 200px;
+            }
+        }
+
+          @media screen and (max-width:768px){
+            .car02_top{
+                padding-bottom: 150px;
+            }
+            .mococo{
+                padding-bottom: 37px;
+            }
+            .bern{
+                padding-bottom: 37px;
+            }
+          }
+
+          .ruhteran{
+            padding-bottom: 28px;
+          }
+          .aintz{
+            padding-bottom: 10px;
+          }
+
+    	/*carousel 캡션 이미지 위치 조정*/
+    	#main_carousel .carousel-item .carousel-caption{
+    		/*border: 1px solid red;*/
+    		position: absolute;
+    		z-index: 1;
+    	}
+    	#main_carousel .carousel-item:nth-of-type(1) .carousel-caption{
+    		top: 20px;
+            padding-top: 200px;
+    	}
+    	#main_carousel .carousel-item:nth-of-type(2) .carousel-caption{
+    		bottom: -4%;
+    		z-index: 1;
+    	}
+        .car02_top{
+            position: relative;
+            top: 300px;
+            z-index: 2;
+        }
+    	#main_carousel .carousel-item:nth-of-type(3) .carousel-caption{
+            padding-top: 200px;
+    		top: 50%;
+            margin-top: -450px;
+    	}
+        #main_carousel .carousel-item:nth-of-type(3) .carousel-caption .car03_botm {
+            position: relative;
+            top: -200px;           
+        }
+        .carousel03_1{
+            z-index: 2;
+        }
+        .carousel03_2{
+            z-index: -1;
+            padding-bottom: 100px;
+        }
+    	
+    	
+    	/*캐러셀 배경 이미지를 어둡게 해서 컨텐츠 부각시키기*/
+    	#main_carousel .carousel-item::after{
+    		content: "";
+    		position: absolute;
+    		width: 100%;
+    		height: 100%;
+    		background-color: white;
+    		opacity: .2;
+    	}
+
+    	/*carousel 좌우 버튼 을 마우스로 올리면 나타나도록 설정*/
+    	#main_carousel .carousel-control-next{
+    		right: -200px;
+    		transition: right 1s
+    	}
+    	#main_carousel .carousel-control-prev{
+    		left: -600px;
+    		transition: left 1s
+    	}
+    	#main_carousel:hover .carousel-control-next{
+    		right: 0px;
+    	}
+    	#main_carousel:hover .carousel-control-prev{
+    		left: 0px;
+    	}
+
+    	/*11.carousel 좌우 버트 호버시 색상 바꾸기*/
+    	.carousel-control-next:hover{
+    		color : var(--purple);
+    	}
+		.carousel-control-prev:hover{
+			color : var(--purple);
+		}
+		#main_carousel .carousel-indicators .active{
+			background-color:  var(--purple);
+		}
+		/*loading 이미지 위치 조정*/
+		.loading .d-flex img{
+			width: 280px;
+			height: 280px;
+			position: absolute;
+			top: 50%;
+			margin-top: -140px;
+
+		}
+		.loading{
+			height: 100vh;
+			background-color: #000000;
+		}
+        .bg-loading{
+            background-color: var(--loading);
+        }
+        .bg-black{
+            background-color: var(--black);
+        }
+        .bg-purple{
+            background-color: var(--purple);
+        }
+        .bg-black2{
+            background-color: var(--black2);
+        }
+
+        /*NAVBAR의 HEIGHT 를 설정*/
+        .navbar-nav .nav-link{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        /*2번째 section 이미지 넣기*/
+
+        section#class{
+            background: url(../lostark/menu03_class_bg.png) no-repeat center / cover fixed;
+        }
+
+        section#video{
+            background: url(../lostark/menu05_background_bg.png) no-repeat center / cover fixed;
+            padding: 80px;
+        }
+        section#contact{
+            background: url(../lostark/menu07_background_bg.png) no-repeat center / cover fixed;
+            padding: 80px;
+        }
+
+        html,body{
+            overflow : hidden;
+        }
+        .card-body .card-text{
+            color: white;
+        }
+        .card-body .card-text::before{
+            content: "";
+            width: 70%;
+            height: 2px;
+            background-color: var(--black2);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .world_content{
+            padding-bottom: 10px;
+        }
+        .form-control::placeholder{
+            color: white;
+        }
+        #inputState option{
+            color: black;
+        }
+
+        /*wayponit 실행 전 원하는 요소를 보이지 않도록 설정*/
+        .wp1, .wp2, .wp3, .wp4, .wp5, .wp6, .wp7, .wp8, .wp9, .wp10, .wp11, .wp12, .wp13
+        , .wp14, .wp15, .wp16, .wp17, .wp18, .wp19, , .wp21{
+            visibility: hidden;
+        }
+        .animate__animated{
+            visibility: visible;
+        }
